@@ -1,5 +1,5 @@
-﻿
-* { font-family: Tahoma }
+﻿* { 
+font-family: Tahoma }
 body {
 background-image: url(books.png); background-repeat: repeat-y;margin: 5em 10em 5em 10em;
 }
@@ -24,13 +24,19 @@ h1 {color: yellow !important; }
 h1 + h2  {
 letter-spacing: 5px;
 }
+/*Akapit znajdujacy się w td które ma atrybut colspan =2*/
 td[colspan="2"] p {
 font-size: small;
 
 }
-p + p {
+
+p + p { /*Akapit który ma pprzednika*/
 color: gray;
 }
 p { text-align: justify }
 h1 { color: blue }
 h1 { color: green }
+#wydawnictwo{
+text-decoration: underline;    
+    
+}
