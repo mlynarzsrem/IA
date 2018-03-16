@@ -17,13 +17,14 @@
     top: 30px;
     left: 110px;
     font-size: 200%;
-    padding: 24px; }
+    padding: 24px;
+    margin-right: 10px; }
   .header .header_menu {
     position: absolute;
     top: 30px;
     right: 0px;
     float: right;
-    margin-right: 60px; }
+    margin-right: 10%; }
     .header .header_menu .menu_item {
       float: left;
       padding: 30px; }
@@ -33,7 +34,7 @@
     position: absolute;
     top: 30px;
     right: 0px;
-    margin-right: 60px; }
+    margin-right: 2%; }
     .header .header_menu_min img {
       width: 50px; }
 
@@ -49,6 +50,7 @@
     display: block; }
 
   .container {
+    position: relative;
     padding: 5%;
     float: left;
     width: auto; }
@@ -67,6 +69,7 @@
     display: block; }
 
   .container {
+    position: relative;
     padding: 5%;
     float: left;
     width: 80%;
@@ -86,6 +89,7 @@
     display: None; }
 
   .container {
+    position: relative;
     padding: 5%;
     float: left;
     width: 90%;
@@ -134,9 +138,9 @@
       background-color: pink; }
 
 .footer {
-  background-color: #d6d6c2;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
+  background-color: #d6d6c2;
   border-top: 5px solid;
   width: 100%;
   text-align: center;

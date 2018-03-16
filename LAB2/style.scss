@@ -25,13 +25,14 @@ $image-height:80px;
         left: $image-height + 30px;
         font-size: 200%;
         padding: (80px - $font-size-n * 2)/2;
+        margin-right: 10px;
     }
     .header_menu{
         position: absolute;
         top: 30px;
         right: 0px;
         float: right;
-        margin-right: 60px;
+        margin-right: 10%;
         .menu_item{
             float: left;
             padding: 30px;
@@ -44,7 +45,7 @@ $image-height:80px;
         position: absolute;
         top: 30px;
         right: 0px;
-        margin-right: 60px;
+        margin-right: 2%;
         img{
             width: 50px;
         }
@@ -63,6 +64,7 @@ $image-height:80px;
         display: block;
     }  
     .container{
+        position: relative;
         padding: 5%;
         float: left;
         width: auto;
@@ -88,6 +90,7 @@ $image-height:80px;
         display: block;
     }    
     .container{
+        position: relative;
         padding: 5%;
         float: left;
         width: $tablet-width;
@@ -117,6 +120,7 @@ $image-height:80px;
         display: None;
     }
     .container{
+        position: relative;
         padding: 5%;
         float: left;
         width: $desktop-width;
@@ -188,9 +192,9 @@ $image-height:80px;
     }
 }
 .footer{
+    position: absolute;
+    bottom: 0px;
     background-color: #d6d6c2;
-    position:absolute;
-   bottom:0;
     border-top: 5px solid;
     width: 100%;
     text-align: center;
