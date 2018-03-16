@@ -1,0 +1,198 @@
+$tablet-width: 80%;
+$desktop-width: 90%;
+$font-size-n: 16px;
+$image-height:80px; 
+.body{
+    font-size: $font-size-n;
+}
+
+.header{
+    position: realtive;
+    width: 100%;
+   height:100px;
+    padding: 30px;
+    .header_logo{
+        position: absolute;
+        top: 30px;
+        left: 30px ;
+        img{
+            height: $image-height;
+        }
+    }
+    .header_title{
+        position: absolute;
+        top: 30px;
+        left: $image-height + 30px;
+        font-size: 200%;
+        padding: (80px - $font-size-n * 2)/2;
+    }
+    .header_menu{
+        position: absolute;
+        top: 30px;
+        right: 0px;
+        float: right;
+        margin-right: 60px;
+        .menu_item{
+            float: left;
+            padding: 30px;
+        }
+        .menu_item:after{
+            clear: both;
+        }
+    }
+    .header_menu_min{
+        position: absolute;
+        top: 30px;
+        right: 0px;
+        margin-right: 60px;
+        img{
+            width: 50px;
+        }
+    }
+    
+}
+.header:after{
+    clear: both;
+}
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    .header_menu{
+        display: None;
+    }
+    .header_menu_min{
+        display: block;
+    }  
+    .container{
+        padding: 5%;
+        float: left;
+        width: auto;
+        .col-sm{
+            float: left;
+        }
+        .col-sm-4{
+            @extend .col-sm;
+            width: (100%*4)/12;
+        }
+        .col-sm-12{
+            @extend .col-sm;
+            width: (100%*12)/12;
+        }
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .header_menu{
+        display: None;
+    }
+    .header_menu_min{
+        display: block;
+    }    
+    .container{
+        padding: 5%;
+        float: left;
+        width: $tablet-width;
+        margin-left: (100%-$tablet-width)/2;
+        margin-right: (100%-$tablet-width)/2;
+        .col-md{
+            float: left;
+        }
+        .col-md-4{
+            @extend .col-md;
+            width: ($tablet-width*4)/12;
+        }
+        .col-md-6{
+            @extend .col-md;
+            width: ($tablet-width*6)/12;
+        }
+        .col-md-12{
+            @extend .col-md;
+            width: ($tablet-width*12)/12;
+        }
+    }
+
+}
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    .header_menu_min{
+        display: None;
+    }
+    .container{
+        padding: 5%;
+        float: left;
+        width: $desktop-width;
+        margin-left: (100%-$desktop-width)/2;
+        margin-right: (100%-$desktop-width)/2;
+        .col-lg{
+            float: left;
+        }
+        .col-lg-4{
+            @extend .col-lg;
+            width: ($desktop-width*4)/12;
+        }
+        .col-lg-6{
+            @extend .col-lg;
+            width: ($desktop-width*6)/12;
+        }
+        .col-lg-12{
+            @extend .col-lg;
+            width: ($desktop-width*12)/12;
+        }
+    }
+   
+   
+}
+.container:after{
+    clear: both;
+}
+.content{
+    background-color: #d6d6c2;
+    margin: 5%;
+    border: 5px solid;
+    .text{
+        margin-top: 10px;
+        top: $font-size-n*1.5 +20;
+        padding: 5%;
+    }
+    .section_title_navbar{
+        position: relative;
+        width: 100%;
+        height: $font-size-n*1.5 +20px;
+        
+        
+        .section_title{
+            font-size: 150%;
+            right: 0px;
+            text-align: center;
+            padding: 5px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            border: 1px solid;
+            width: 55%;
+        }
+        .site_title{
+            font-size: $font-size-n*2;
+        }
+        .section_title_blue{
+            @extend .section_title;
+            background-color: blue;
+        }
+        .section_title_orange{
+            @extend .section_title;
+            background-color: orange;
+        }
+        .section_title_pink{
+            @extend .section_title;
+             background-color: pink;
+        }
+    }
+}
+.footer{
+    background-color: #d6d6c2;
+    position:absolute;
+   bottom:0;
+    border-top: 5px solid;
+    width: 100%;
+    text-align: center;
+    padding: 3%;
+}
