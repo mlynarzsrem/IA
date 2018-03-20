@@ -57,7 +57,7 @@ $image-height:80px;
     clear: both;
 }
 /* Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
     .header_menu{
         display: None;
     }
@@ -84,7 +84,7 @@ $image-height:80px;
     }
 }
 /* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
     .header_menu{
         display: None;
     }
