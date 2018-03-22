@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8" /><title>JavaScript</title>
+ <script src="jquery-3.3.1.min.js"></script>
+  <script src="parsley.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<body>
+ <form name="dane_osobowe" class="form-horizontal"><table>
+ <div class="form-group">
+ <tr><td>Imię</td><td><input type="text" name="f_imie" class="form-control" required="true"></td></tr>
+ </div>
+ <tr><td>E-mail</td><td><input type="text" name="f_email" class="form-control" name="email" data-parsley-type="email" data-parsley-trigger="change" required="true"></td></tr>
+ <tr><td>Kod pocztowy</td><td><input type="text" name="f_kod" class="form-control" data-parsley-trigger="change" required data-parsley-pattern="/\d{2}-\d{3}/"></td></tr>
+ <tr><td>Miasto</td><td><input type="text" name="f_miasto" class="form-control" required="true"></td></tr>
+ <tr><td colspan="2"><input type="submit" value="Prześlij" id="validate" ></td></tr>
+ </table></form>
+</body>
+</html>
+
+<script>
+$("form").parsley({trigger: "change keyup"});
+$(document).ready(function(){
+ $('form').parsley();
+});
+</script>
