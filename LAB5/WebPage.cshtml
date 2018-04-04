@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    @{
+        var name = Request.Form["name"];
+    }
+</head>
+<body>
+    @for (int i = 1; i <= 10; i++)
+    {
+        <ul>His name is @name</ul>
+    }
+</body>
+</html>
