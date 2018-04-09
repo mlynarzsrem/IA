@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+ <title>JSON</title>
+ <script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script>
+ function get(url) {
+  return new Promise(function(resolve, reject) {
+    var req = new XMLHttpRequest();
+    req.open('GET', url);
+    req.onload = function() {
+      if (req.status == 200) {
+        resolve(req.response);
+      }
+      else {
+        req.statusText="Wystapil blad"
+        reject(Error(req.statusText));
+      }
+    };
+    req.onerror = function() {
+      reject(Error("Network Error"));
+    };
+    req.send();
+  });
+}
+ </script>
+</head>
+<body>
+<input id="input"type="text" name="test" method="post">
+<button onclick="makeRequest()">sss</button>
+ <div id="value"></div>
+</body>
+<script>
+     function makeRequest(){
+     var url =document.getElementById('input').value
+     console.log(url);
+     get(url).then(function(response) {
+          console.log("Success!", response);
+          document.getElementById("value").innerHTML=response;
+        }, function(error) {
+          console.error("Failed!", error);
+          return false
+        })
+        return true
+     }
+</script>
+</html>
