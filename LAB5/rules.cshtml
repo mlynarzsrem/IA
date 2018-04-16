@@ -4,12 +4,15 @@
         <title></title>
         @{
             var rules = (List<string>)Session["rules"];
-            if (rules == null) {
+            if (rules == null)
+            {
                 rules = new List<string>();
             }
             var name = Request.Form["name"];
             if (name != null) {
                 rules.Add(name);
+                Session["rules"] = rules;
+                Response.Redirect("~/rules.cshtml");
             }
             Session["rules"]=rules;
         }
@@ -21,9 +24,11 @@
             submit:<br>
             <input type="submit">
         </form>
+        <ol>
         @for (int i = 0; i < rules.Count(); i++)
         {
-            <ul>@rules[i]</ul>
+            <li>@rules[i]</li>
         }
+        </ol>
     </body>
 </html>
