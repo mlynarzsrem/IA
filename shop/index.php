@@ -49,5 +49,10 @@ include 'connection.php';
     echo '<form action="clearbasket.php"><button type="submit">Clear basket</button></form><br/>';
     }
 ?>
+<form method="POST" action="add.php">
+<input type="text"name="name"/>
+<button type="submit">Add</button>
+</form><br/>
+
 </body>
 </html>
