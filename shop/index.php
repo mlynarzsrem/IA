@@ -45,11 +45,11 @@ include 'connection.php';
 </ul>
 <?php
     if(isset($_SESSION['basket'])){
-    echo '<form action="buy.php"><button type="submit">Buy</button></form><br/>';
-    echo '<form action="clearbasket.php"><button type="submit">Clear basket</button></form><br/>';
+    echo '<form action="dbase.php"><button type="submit">Buy</button></form><br/>';
+    echo '<form action="basket.php"><button type="submit">Clear basket</button></form><br/>';
     }
 ?>
-<form method="POST" action="add.php">
+<form method="POST" action="dbase.php">
 <input type="text"name="name"/>
 <button type="submit">Add</button>
 </form><br/>
