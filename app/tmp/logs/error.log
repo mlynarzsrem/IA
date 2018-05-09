@@ -1,0 +1,55 @@
+2018-05-09 09:08:34 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /cake/books/index
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Model\ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3640): ConnectionManager::getDataSource('default')
+#2 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#3 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3667): Model->setSource('books')
+#4 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3038): Model->getDataSource()
+#5 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\cake\app\Controller\BooksController.php(6): Model->find('all')
+#7 [internal function]: BooksController->index()
+#8 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(BooksController), Array)
+#9 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BooksController), Object(CakeRequest))
+#11 C:\xampp\htdocs\cake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-05-09 09:09:56 Error: [MissingViewException] View file "Books\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Books\\index.ctp',
+)
+Request URL: /cake/books/index
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\View\View.php(470): View->_getViewFileName('Books\\index')
+#1 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BooksController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-05-09 09:09:57 Error: [MissingViewException] View file "Books\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Books\\index.ctp',
+)
+Request URL: /cake/books/index
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\View\View.php(470): View->_getViewFileName('Books\\index')
+#1 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BooksController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-05-09 09:10:42 Error: [MissingViewException] View file "Books\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Books\\index.ctp',
+)
+Request URL: /cake/books/index
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\View\View.php(470): View->_getViewFileName('Books\\index')
+#1 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BooksController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
